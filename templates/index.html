@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{# TODO Tiene que tener título, descripción, fecha y posibilidad de editar si es el post del usuario #}
+{% block content %}
+    <h1>{% block title %} Bienvenido a Blagger {% endblock %}</h1>
+    {% for post in posts %}
+        <a href="{{ url_for('post', id_post=post[0]) }}">
+        {# Título #}
+            <h2>{{ post[1] }}</h2>
+        </a>
+        {# Descripción #}
+        <p><b>{{ post[2] }}</b></p>
+        {# Fecha #}
+        <span class="badge badge-primary">{{ post[4].strftime('%d-%m-%Y') }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}
