@@ -7,8 +7,8 @@ app.config['MYSQL_PORT'] = 3307
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'pacoromero'
 app.config['MYSQL_DB'] = 'blog'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-app.config['MYSQL_DATABASE_CHARSET'] = 'utf-8'
+#app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+#app.config['MYSQL_DATABASE_CHARSET'] = 'utf-8'
 
 mysql = MySQL(app)
 
